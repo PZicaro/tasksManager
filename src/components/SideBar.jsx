@@ -1,15 +1,15 @@
-import {CustomButton} from './CustomButton';
-import { useNavigate} from 'react-router-dom'
+import { CustomButton } from './CustomButton'
+import { useNavigate } from 'react-router-dom'
 
-import './SideBar.scss';
-import logo from '../assets/images/logo.png';
+import './SideBar.scss'
+import logo from '../assets/images/logo.png'
 
 export const SideBar = () => {
-const navigate = useNavigate()
-const handleSignOutClick = () => {
-    navigate("/login")
-}
-    return(
+  const navigate = useNavigate()
+  const handleSignOutClick = () => {
+    navigate('/login')
+  }
+  return (
         <div className="sidebar-container">
             <div className="logo">
                  <img src={logo} alt="FullStack Club" />
@@ -18,5 +18,4 @@ const handleSignOutClick = () => {
                 <CustomButton onClick={handleSignOutClick}>Sair</CustomButton>
             </div>
         </div>)
-    
 }

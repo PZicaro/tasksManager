@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
-  },
+    "preview": "vite preview",
+    "lint": "yarn eslint --fix --ext .jsx .",
+    "husky:prepare": "husky install"    },
   "dependencies": {
     "axios": "^0.27.2",
     "node-sass": "^7.0.3",
@@ -23,6 +24,14 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.8",
+    "prettier-config-standard": "^5.0.0",
     "vite": "^3.1.0",
     "vite-plugin-compression": "^0.5.1"
   }
