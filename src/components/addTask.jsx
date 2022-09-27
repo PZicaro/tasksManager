@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 import { useAlert } from 'react-alert'
-import axios from "axios"
+import axios from 'axios'
 
 import { CustomButton } from './CustomButton'
 import { CustomInput } from './CustomInput'
