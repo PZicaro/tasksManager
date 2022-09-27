@@ -21,7 +21,7 @@ export const AddTask = ({ fetchTask }) => {
       if (taskItem.length === 0) {
         return alert.error('A tarefa precisa de uma descrição para ser adicionada.')
       }
-      await axios.post('https://fsc-task-manager-backend.herokuapp.com/tasks', {
+      await axios.post(`${import.meta.env.VITE_APP_API_URL}`, {
         description: taskItem,
         isCompleted: false
       })

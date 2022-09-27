@@ -9,7 +9,7 @@ export const TaskItem = ({ task, fetchTask }) => {
 
   const handleTaskDeletion = async () => {
     try {
-      await axios.delete(`https://fsc-task-manager-backend.herokuapp.com/tasks/${task._id}`)
+      await axios.delete(`${import.meta.env.VITE_APP_API_URL}/${task._id}`)
 
       fetchTask()
 
@@ -20,7 +20,7 @@ export const TaskItem = ({ task, fetchTask }) => {
   }
   const handleTaskCompletionChange = async (e) => {
     try {
-      await axios.patch(`https://fsc-task-manager-backend.herokuapp.com/tasks/${task._id}`, {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/${task._id}`, {
         isCompleted: e.target.checked
       })
 

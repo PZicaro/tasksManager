@@ -14,7 +14,7 @@ export const Task = () => {
   const fetchTask = async () => { // função para pegar backend
     try {
       // lembrar destruturing
-      const { data } = await axios.get('https://fsc-task-manager-backend.herokuapp.com/tasks')
+      const { data } = await axios.get(`${import.meta.env.VITE_APP_API_URL}`)
       setTask(data) // joga o que foi pego pelo back no array
     } catch (_error) {
     }
